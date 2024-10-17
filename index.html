@@ -3,45 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Coffee Preference Survey</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 id="title">Survey Form</h1>
-    <p id="description"> ijeniwne </p>
-    <form id="survey-form">
-    <fieldset>
-    <label id="name-label" for="name">Enter Your First Name: <input placeholder="#name" id="name" type="text" required /></label>
-    <label id="email-label" for="email">Enter Your Email: <input placeholder="#email" id="email" type="email" required /></label>
-    <label id="number-label" for="number">Input your age (years): <input placeholder="#number" id="number" type="number" name="age" min="1" max="120" /></label>
-    <label for="dropdown">How did you hear about us?
-    <select id="dropdown" name="dropdown">
-    <option value="">(select one)</option>
-    <option value="1">freeCodeCamp News</option>
-    <option value="2">freeCodeCamp YouTube Channel</option>
-    <option value="3">freeCodeCamp Forum</option>
-    <option value="4">Other</option>
-    </select>
-    </label>
-    </fieldset>
-    <fieldset>
-    <legend>Account type (required)</legend>
-    <label for="personal-account"><input id="personal-account" type="radio" name="name" class="inline" value="1" checked /> Personal</label>
-    <label for="business-account"><input id="business-account" type="radio" name="name" class="inline" value="2" /> Business</label>
-    </fieldset>
-    <fieldset>
-    
-    
-    <label for="terms-and-conditions">
-    <input value="1" class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the
-    <input value="2" class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the
-    <input value="3" class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the
-    </label>
-    <label for="bio">Provide a bio:
-    <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
-    </label>
-    </fieldset>
-    <input type="submit" value="Submit" id="submit" />
-    </form>
-    </body>
+    <div class="container">
+        <h1>Coffee Preference Survey</h1>
+        <p>This is so we can make you coffee in the morning before you can even think you need it.<br>Thank you for working here, we really value your time and work.</p>
+        
+        <form>
+            <label for="name">First and Last Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="age">Age (Optional):</label>
+            <input type="number" id="age" name="age" min="16" max="120"  placeholder="Age">
+
+            <label for="role">What is your role:</label>
+            <select id="role" name="role">
+                <option value="" disabled selected>Select a role</option>
+                <option value="manager">Manager</option>
+                <option value="employee">Employee</option>
+                <option value="intern">Intern</option>
+            </select>
+
+            <label>What is your preferred coffee:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="coffee" value="cappuccino" checked> Cappuccino</label>
+                <label><input type="radio" name="coffee" value="americano"> Americano</label>
+                <label><input type="radio" name="coffee" value="espresso"> Espresso</label>
+                <label><input type="radio" name="coffee" value="decaf"> Decaf</label>
+            </div>
+
+            <label>Add extra to the coffee:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="extra" value="sugar"> Sugar</label>
+                <label><input type="checkbox" name="extra" value="vanilla"> Vanilla</label>
+                <label><input type="checkbox" name="extra" value="blue_raspberry"> Blue Raspberry</label>
+                <label><input type="checkbox" name="extra" value="salt"> Salt</label>
+                <label><input type="checkbox" name="extra" value="birthday_cake"> Birthday Cake</label>
+                <label><input type="checkbox" name="extra" value="sleep"> Sleep</label>
+                <label><input type="checkbox" name="extra" value="figma"> Figma</label>
+                <label><input type="checkbox" name="extra" value="pepper"> Pepper</label>
+            </div>
+
+            <label for="notes">Additional notes:</label>
+            <textarea id="notes" name="notes" placeholder="Enter notes"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
 </html>
