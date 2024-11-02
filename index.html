@@ -11,12 +11,10 @@
 <h1 id="title">Coffee Preference Survey</h1>
 <p id="description">
     This is so we can make you coffee in the morning before you can even think you need it.<br>
-    Thank you for working here, we really value your time and work.
-</p>
+    Thank you for working here, we really value your time and work.</p>
 
 <form id="survey-form" method="post">
 
-    <!-- Input fields for Name, Email, and Age -->
     <label id="name-label" for="name">First and Last Name:</label>
     <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
@@ -26,7 +24,6 @@
     <label id="number-label" for="age">Age (Optional):</label>
     <input type="number" id="number" name="age" placeholder="Age" min="18" max="120">
 
-    <!-- Dropdown Menu for Role -->
     <label for="dropdown">What is your role:</label>
     <select id="dropdown" name="role" required>
         <option value="" disabled selected>Select a role</option>
@@ -35,7 +32,6 @@
         <option value="3">Nothinger</option>
     </select>
 
-    <!-- Radio Buttons for Preferred Coffee -->
     <fieldset>
         <legend>What is your preferred coffee:</legend>
         <label for="cappuccino"><input type="radio" id="cappuccino" name="coffee" value="Cappuccino" required> Cappuccino</label>
@@ -44,7 +40,6 @@
         <label for="decaf"><input type="radio" id="decaf" name="coffee" value="Decaf"> Decaf</label>
     </fieldset>
 
-    <!-- Checkbox Options for Extras -->
     <fieldset>
         <legend>Add extra to the coffee:</legend>
         <label for="sugar"><input type="checkbox" id="sugar" name="extra" value="Sugar"> Sugar</label>
@@ -57,13 +52,10 @@
         <label for="pepper"><input type="checkbox" id="pepper" name="extra" value="Pepper"> Pepper</label>
     </fieldset>
 
-    <!-- Textarea for Additional Notes -->
     <label for="notes">Additional notes:</label>
     <textarea id="notes" name="notes" rows="3" placeholder="Enter notes"></textarea>
 
-    <!-- Submit Button -->
     <button type="submit" id="submit">Submit</button>
 </form>
-
 </body>
 </html>
