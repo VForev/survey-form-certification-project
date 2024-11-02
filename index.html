@@ -1,59 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Preference Survey</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survey Form</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Coffee Preference Survey</h1>
-        <p>This is so we can make you coffee in the morning before you can even think you need it.<br>Thank you for working here, we really value your time and work.</p>
-        
-        <form>
-            <label for="name">First and Last Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+<h1 id="title">Coffee Preference Survey</h1>
+<p id="description">
+    This is so we can make you coffee in the morning before you can even think you need it.<br>
+    Thank you for working here, we really value your time and work.
+</p>
 
-            <label for="age">Age (Optional):</label>
-            <input type="number" id="age" name="age" min="16" max="120"  placeholder="Age">
+<form id="survey-form" method="post">
 
-            <label for="role">What is your role:</label>
-            <select id="role" name="role">
-                <option value="" disabled selected>Select a role</option>
-                <option value="manager">Manager</option>
-                <option value="employee">Employee</option>
-                <option value="intern">Intern</option>
-            </select>
+    <!-- Input fields for Name, Email, and Age -->
+    <label id="name-label" for="name">First and Last Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-            <label>What is your preferred coffee:</label>
-            <div class="radio-group">
-                <label><input type="radio" name="coffee" value="cappuccino" checked> Cappuccino</label>
-                <label><input type="radio" name="coffee" value="americano"> Americano</label>
-                <label><input type="radio" name="coffee" value="espresso"> Espresso</label>
-                <label><input type="radio" name="coffee" value="decaf"> Decaf</label>
-            </div>
+    <label id="email-label" for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-            <label>Add extra to the coffee:</label>
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="extra" value="sugar"> Sugar</label>
-                <label><input type="checkbox" name="extra" value="vanilla"> Vanilla</label>
-                <label><input type="checkbox" name="extra" value="blue_raspberry"> Blue Raspberry</label>
-                <label><input type="checkbox" name="extra" value="salt"> Salt</label>
-                <label><input type="checkbox" name="extra" value="birthday_cake"> Birthday Cake</label>
-                <label><input type="checkbox" name="extra" value="sleep"> Sleep</label>
-                <label><input type="checkbox" name="extra" value="figma"> Figma</label>
-                <label><input type="checkbox" name="extra" value="pepper"> Pepper</label>
-            </div>
+    <label id="number-label" for="age">Age (Optional):</label>
+    <input type="number" id="number" name="age" placeholder="Age" min="18" max="120">
 
-            <label for="notes">Additional notes:</label>
-            <textarea id="notes" name="notes" placeholder="Enter notes"></textarea>
+    <!-- Dropdown Menu for Role -->
+    <label for="dropdown">What is your role:</label>
+    <select id="dropdown" name="role" required>
+        <option value="" disabled selected>Select a role</option>
+        <option value="1">Manager</option>
+        <option value="2">Sleeper</option>
+        <option value="3">Nothinger</option>
+    </select>
 
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+    <!-- Radio Buttons for Preferred Coffee -->
+    <fieldset>
+        <legend>What is your preferred coffee:</legend>
+        <label for="cappuccino"><input type="radio" id="cappuccino" name="coffee" value="Cappuccino" required> Cappuccino</label>
+        <label for="americano"><input type="radio" id="americano" name="coffee" value="Americano"> Americano</label>
+        <label for="espresso"><input type="radio" id="espresso" name="coffee" value="Espresso"> Espresso</label>
+        <label for="decaf"><input type="radio" id="decaf" name="coffee" value="Decaf"> Decaf</label>
+    </fieldset>
+
+    <!-- Checkbox Options for Extras -->
+    <fieldset>
+        <legend>Add extra to the coffee:</legend>
+        <label for="sugar"><input type="checkbox" id="sugar" name="extra" value="Sugar"> Sugar</label>
+        <label for="vanilla"><input type="checkbox" id="vanilla" name="extra" value="Vanilla"> Vanilla</label>
+        <label for="blue-raspberry"><input type="checkbox" id="blue-raspberry" name="extra" value="Blue Raspberry"> Blue Raspberry</label>
+        <label for="salt"><input type="checkbox" id="salt" name="extra" value="Salt"> Salt</label>
+        <label for="birthday-cake"><input type="checkbox" id="birthday-cake" name="extra" value="Birthday Cake"> Birthday Cake</label>
+        <label for="sleep"><input type="checkbox" id="sleep" name="extra" value="Sleep"> Sleep</label>
+        <label for="figma"><input type="checkbox" id="figma" name="extra" value="Figma"> Figma</label>
+        <label for="pepper"><input type="checkbox" id="pepper" name="extra" value="Pepper"> Pepper</label>
+    </fieldset>
+
+    <!-- Textarea for Additional Notes -->
+    <label for="notes">Additional notes:</label>
+    <textarea id="notes" name="notes" rows="3" placeholder="Enter notes"></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit" id="submit">Submit</button>
+</form>
+
 </body>
 </html>
